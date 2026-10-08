@@ -49,14 +49,14 @@ permissions:
 # ─────────────────────────────────────────────
 concurrency:
   group: ci-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 # ─────────────────────────────────────────────
 # Global Environment Variables
 # ─────────────────────────────────────────────
 env:
   NODE_VERSION: "22"
-  IMAGE_NAME:  ${{ secrets.DOCKER_USER }}/zomato_new
+  IMAGE_NAME:  ${{ secrets.DOCKER_USERNAME }}/zomato_new
   IMAGE_TAG: ${{ github.sha }}
 
 jobs:
